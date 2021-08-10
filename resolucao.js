@@ -178,6 +178,8 @@ function fixQuantity(quantityToFix) {
 // 1 e) create and write fixed Json file
 function createAndWriteFixedJsonFile(_fixedFileName) {
     try {
+        // referência de uso do procedimento stringify retirado no site:
+        // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
         fs.writeFileSync(_fixedFileName, JSON.stringify(produtos, null, 2))
         // console.log('\n********************************')
         // console.log(`  Arquivo ${_fixedFileName}`)

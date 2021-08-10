@@ -220,9 +220,9 @@ function categorySumPrice(_jsonFile) {
         else {
             // Busca de índices retirado do stackoverflow:
             // https://pt.stackoverflow.com/questions/32185/resgatar-o-index-de-um-objeto-com-certo-atributo-dentro-de-um-array-de-objetos
-            indice = estoquePorCategoria.indexOf(estoquePorCategoria.filter(function (obj) {
+            indice = estoquePorCategoria.findIndex(function(obj) {
                 return obj.categoria == _jsonFile[i].category;
-            })[0]);
+            });
             if (indice != -1) {
                 estoquePorCategoria[indice].valor += (_jsonFile[i].quantity * _jsonFile[i].price)
             }
